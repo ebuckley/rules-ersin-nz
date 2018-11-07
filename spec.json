@@ -1,0 +1,1825 @@
+{
+  "commons": {
+    "Headers": {
+      "Country-Package": {
+        "description": "The name of the country package currently loaded in this API server",
+        "type": "string"
+      },
+      "Country-Package-Version": {
+        "description": "The version of the country package currently loaded in this API server",
+        "type": "string"
+      }
+    }
+  },
+  "definitions": {
+    "Brackets": {
+      "additionalProperties": {
+        "format": "float",
+        "type": "number"
+      },
+      "type": "object"
+    },
+    "Entities": {
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "documentation": {
+          "type": "string"
+        },
+        "plural": {
+          "type": "string"
+        },
+        "roles": {
+          "additionalProperties": {
+            "$ref": "#/definitions/Roles"
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "Family": {
+      "additionalProperties": false,
+      "properties": {
+        "age_of_youngest": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "type": "object"
+        },
+        "best_start__family_has_children_eligible": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "children": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "disability_allowance__family_has_eligible_child": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "family_has_child_eligible_for_disability_allowance_child_under_6": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "family_has_resident_child_aged_5_who_will_be_enrolled_in_school": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "family_has_resident_child_under_5_not_in_school": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "family_scheme__has_dependent_children": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "others": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "parents": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "partners": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "principal_caregiver": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "social_security__has_child_in_family": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__has_orphaned_child_in_family": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__has_unsupported_child_in_family": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "sole_parent__family_has_child_under_age_limit": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "Formula": {
+      "properties": {
+        "content": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Parameter": {
+      "example": {
+        "description": null,
+        "id": "entitlements.superannuation",
+        "metadata": {},
+        "source": "https://github.com/ServiceInnovationLab/openfisca-aotearoa/blob/5.1.0/openfisca_aotearoa/parameters/entitlements/superannuation",
+        "subparams": {
+          "age_qualification": {
+            "description": "Age qualification for New Zealand superannuation"
+          }
+        }
+      },
+      "properties": {
+        "brackets": {
+          "additionalProperties": {
+            "$ref": "#/definitions/Brackets"
+          },
+          "type": "object"
+        },
+        "description": {
+          "type": "string"
+        },
+        "id": {
+          "format": "string",
+          "type": "integer"
+        },
+        "metadata": {
+          "type": "object"
+        },
+        "source": {
+          "type": "string"
+        },
+        "subparams": {
+          "additionalProperties": {
+            "properties": {
+              "definition": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "type": "object"
+        },
+        "values": {
+          "$ref": "#/definitions/Values"
+        }
+      },
+      "type": "object"
+    },
+    "Parameters": {
+      "additionalProperties": {
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "type": "object"
+    },
+    "Person": {
+      "additionalProperties": false,
+      "properties": {
+        "acc__elected_for_weekly_compensation": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "acc__is_receiving_compensation": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "accommodation_supplement__below_cash_threshold": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "accommodation_supplement__below_income_threshold": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "age": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "type": "object"
+        },
+        "age_of_partner": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "type": "object"
+        },
+        "best_start__eligibility": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "best_start__entitlement": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "best_start__tax_credit_per_child": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "best_start__year_of_child": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "civil_union__is_in_civil_union": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "community_services_card__below_income_threshold": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "date_of_birth": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        },
+        "due_date_of_birth": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        },
+        "eligible_for_social_housing": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "family_scheme__assessable_income": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "family_scheme__assessable_income_for_month": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "family_scheme__base_qualifies": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "family_scheme__caregiver_age_qualifies": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "family_scheme__child_tax_credit_entitlement": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "family_scheme__family_tax_credit_entitlement": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "family_scheme__family_tax_credit_income_under_threshold": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "family_scheme__in_work_tax_credit_entitlement": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "family_scheme__in_work_tax_credit_income_under_threshold": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "family_scheme__in_work_tax_credit_is_full_time_earner": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "family_scheme__parental_tax_credit_entitlement": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "family_scheme__proportion_as_principal_carer": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "family_scheme__qualifies_as_principal_carer": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "family_scheme__qualifies_for_child_tax_credit": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "family_scheme__qualifies_for_family_tax_credit": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "family_scheme__qualifies_for_in_work_tax_credit": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "family_scheme__qualifies_for_minimum_family_tax_credit": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "family_scheme__qualifies_for_parental_tax_credit": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "family_scheme__qualifies_for_working_for_families": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "family_scheme__working_for_families_entitlement": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "financially_supported_by_parent_or_guardian": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "has_a_partner": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "has_been_married_or_in_a_civil_union_or_de_facto_relationship": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "has_community_services_card": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "has_dependent_child": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "home_help__adopted_2_or_more_children": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "home_help__eligible_for_home_help": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "home_help__had_multiple_birth": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "home_help__has_no_immediate_family": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "immigration__holds_permanent_resident_visa": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "immigration__holds_resident_visa": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "immigration__is_protected_person": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "immigration__is_recognised_refugee": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "income_tax__annual_gross_income": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "income_tax__annual_total_deduction": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "income_tax__available_tax_loss": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "income_tax__dependent_child": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "income_tax__net_income": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "income_tax__net_loss": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "income_tax__residence": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "income_tax__tax_payer_filing_status": {
+          "additionalProperties": {
+            "enum": [
+              "non_filing",
+              "filing",
+              "filing_with_schedular_income",
+              "reference"
+            ],
+            "type": "string"
+          },
+          "type": "object"
+        },
+        "income_tax__taxable_income": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "is_a_parent": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "is_a_step_parent": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "is_adequately_supported_by_partner": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "is_attending_school": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "is_citizen_or_resident": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "is_dependent_child": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "is_in_civil_union": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "is_in_de_facto_relationship": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "is_married": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "is_married_or_in_a_civil_union_or_de_facto_relationship": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "is_nz_citizen": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "is_permanent_resident": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "is_resident": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "jobseeker_support__below_income_threshold": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "jobseeker_support__is_prepared_for_employment": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "jobseeker_support__meets_age_threshold": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "living_with_parent_or_guardian": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "marriage__is_married": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "monthly_income": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "number_of_years_lived_in_nz": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "type": "object"
+        },
+        "parental_leave__applied_for_leave_or_stopped_working": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "parental_leave__eligible_employee": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "parental_leave__had_previous_parental_leave_in_last_six_months": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "parental_leave__is_primary_carer": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "parental_leave__threshold_tests": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "type": "object"
+        },
+        "property_relationships__is_in_de_facto_relationship": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "rates_rebates__combined_income": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "rates_rebates__dependants": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "type": "object"
+        },
+        "social_security__cash_assets": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "type": "object"
+        },
+        "social_security__child_meets_child_disability_allowance_criteria": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__child_with_serious_disability": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__disability_was_self_inflicted": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__eligible_for_accommodation_supplement": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__eligible_for_child_disability_allowance": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__eligible_for_childcare_subsidy": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__eligible_for_community_services_card": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__eligible_for_jobseeker_support": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__eligible_for_orphans_benefit": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__eligible_for_sole_parent_support": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__eligible_for_supported_living_payment": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__eligible_for_unsupported_childs_benefit": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__eligible_for_young_parent_payment": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__family_income_under_young_parent_payment_threshold": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__has_accomodation_costs": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__has_dependant_child": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__has_resided_continuously_in_nz_for_a_period_of_at_least_2_years_at_any_one_time": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__has_severely_restricted_capacity_for_work": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__in_receipt_of_basic_grant": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__income_under_young_parent_payment_threshold": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__is_a_beneficiary": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__is_a_child": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__is_a_specified_beneficiary": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__is_being_paid_jobseeker_benefit": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__is_dependent_child": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__is_financially_independent": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__is_fulltime_student": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__is_in_full_employment": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__is_ordinarily_resident_in_new_zealand": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__is_orphaned": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__is_principal_carer_for_one_year_from_application_date": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__is_required_to_give_fulltime_care": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__is_the_parent_of_dependent_child": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__is_totally_blind": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__medical_certification_months": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "type": "object"
+        },
+        "social_security__meets_residential_requirements_for_certain_benefits": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__meets_young_parent_payment_basic_requirements": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__meets_young_parent_payment_in_relationship_requirements": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__meets_young_parent_payment_single_persons_requirements": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__parents_unable_to_provide_sufficient_care": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__received_child_disability_allowance": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__received_income_tested_benefit": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__received_orphans_benefit": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__received_residential_care_subsidy": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__received_superannuation": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__received_unsupported_childs_benefit": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__recieves_goverment_assisted_scheme_payments": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__recieves_main_benefit": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__requires_constant_care_and_attention": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__single_young_person_in_exceptional_circumstances": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "social_security__spouse_is_a_specified_beneficiary": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "sole_parent_support__below_income_threshold": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "sole_parent_support__meets_age_threshold": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "sole_parent_support__meets_relationship_qualification": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "sole_parent_support__meets_years_in_nz_requirement": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "student_allowance__approved_to_study_overseas": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "student_allowance__approved_to_study_parttime": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "student_allowance__combined_income": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "student_allowance__eligible_for_basic_grant": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "student_allowance__eligible_for_certain_allowances": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "student_allowance__eligible_for_independent_circumstances": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "student_allowance__has_a_spouse": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "student_allowance__has_a_supported_child": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "student_allowance__income_before_tax": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "student_allowance__is_a_dependent_student": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "student_allowance__is_a_student": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "student_allowance__is_childless": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "student_allowance__is_enrolled_fulltime": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "student_allowance__is_living_with_a_parent": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "student_allowance__is_married_or_partnered": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "student_allowance__is_secondary_student": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "student_allowance__is_tertiary_student": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "student_allowance__meets_attendance_and_performance_requirements": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "student_allowance__partner_has_a_supported_child": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "super___eligibility_age": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "type": "object"
+        },
+        "super__eligibility": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "supported_living_payment__below_income_threshold": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "total_number_of_years_lived_in_nz_since_age_20": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "type": "object"
+        },
+        "total_number_of_years_lived_in_nz_since_age_50": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "type": "object"
+        },
+        "veterans_support__is_entitled_to_be_paid_veterans_pension": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "veterans_support__received_childrens_pension": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "veterans_support__received_parents_allowance": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "veterans_support__received_veterans_pension": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "veterans_support__received_weekly_compensation": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "veterans_support__received_weekly_income_compensation": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "will_be_enrolled_in_school": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "type": "object"
+        },
+        "yearly_income": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "Roles": {
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "max": {
+          "type": "integer"
+        },
+        "plural": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "SituationInput": {
+      "additionalProperties": false,
+      "example": "No simulation example has been defined for this tax and benefit system. If you are the maintainer of Openfisca-Aotearoa, you can define an example by following this documentation: http://openfisca.org/doc/openfisca-web-api/config-openapi.html",
+      "properties": {
+        "families": {
+          "additionalProperties": {
+            "$ref": "#/definitions/Family"
+          },
+          "type": "object"
+        },
+        "persons": {
+          "additionalProperties": {
+            "$ref": "#/definitions/Person"
+          },
+          "type": "object"
+        },
+        "titled_properties": {
+          "additionalProperties": {
+            "$ref": "#/definitions/Titled_Property"
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "SituationOutput": {
+      "additionalProperties": false,
+      "example": "No simulation example has been defined for this tax and benefit system. If you are the maintainer of Openfisca-Aotearoa, you can define an example by following this documentation: http://openfisca.org/doc/openfisca-web-api/config-openapi.html",
+      "properties": {
+        "families": {
+          "additionalProperties": {
+            "$ref": "#/definitions/Family"
+          },
+          "type": "object"
+        },
+        "persons": {
+          "additionalProperties": {
+            "$ref": "#/definitions/Person"
+          },
+          "type": "object"
+        },
+        "titled_properties": {
+          "additionalProperties": {
+            "$ref": "#/definitions/Titled_Property"
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "Titled_Property": {
+      "additionalProperties": false,
+      "properties": {
+        "others": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "owners": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "rates_rebates__maximum_income_for_full_rebate": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "rates_rebates__minimum_income_for_no_rebate": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "rates_rebates__rates_total": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "rates_rebates__rebate": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "Trace": {
+      "example": "No simulation example has been defined for this tax and benefit system. If you are the maintainer of Openfisca-Aotearoa, you can define an example by following this documentation: http://openfisca.org/doc/openfisca-web-api/config-openapi.html",
+      "properties": {
+        "entitiesDescription": {
+          "properties": {
+            "families": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "persons": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "titled_properties": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        },
+        "requestedCalculations": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "trace": {
+          "additionalProperties": {
+            "properties": {
+              "dependencies": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "value": {
+                "items": {
+                  "type": "any"
+                },
+                "type": "array"
+              }
+            },
+            "type": "object"
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "Values": {
+      "additionalProperties": {
+        "format": "float",
+        "type": "number"
+      },
+      "type": "object"
+    },
+    "Variable": {
+      "example": {
+        "defaultValue": false,
+        "definitionPeriod": "MONTH",
+        "description": "In receipt of payments under a Government-assisted scheme which the chief executive considers analogous to a main benefit under Socal Security Act",
+        "entity": "person",
+        "id": "social_security__recieves_goverment_assisted_scheme_payments",
+        "source": "https://github.com/ServiceInnovationLab/openfisca-aotearoa/blob/5.1.0/openfisca_aotearoa/variables/acts/social_security/interpretation/financially_independent.py#L29-L34",
+        "valueType": "Boolean"
+      },
+      "properties": {
+        "defaultValue": {
+          "type": "string"
+        },
+        "definitionPeriod": {
+          "enum": [
+            "MONTH",
+            "YEAR",
+            "ETERNITY"
+          ],
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "entity": {
+          "type": "string"
+        },
+        "formulas": {
+          "additionalProperties": {
+            "$ref": "#/definitions/Formula"
+          },
+          "type": "object"
+        },
+        "id": {
+          "type": "string"
+        },
+        "reference": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "source": {
+          "type": "string"
+        },
+        "valueType": {
+          "enum": [
+            "Int",
+            "Float",
+            "Boolean",
+            "Date",
+            "String"
+          ],
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Variables": {
+      "additionalProperties": {
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "type": "object"
+    }
+  },
+  "host": "localhost:5000",
+  "info": {
+    "contact": {
+      "email": "contact@openfisca.fr"
+    },
+    "description": "The OpenFisca Web API lets you get up-to-date information and formulas included in the Openfisca-Aotearoa legislation.",
+    "license": {
+      "name": "AGPL",
+      "url": "https://www.gnu.org/licenses/agpl-3.0"
+    },
+    "termsOfService": "https://openfisca.org/doc/publishing",
+    "title": "Openfisca-Aotearoa Web API",
+    "version": "5.1.0"
+  },
+  "paths": {
+    "/calculate": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "operationId": "calculate",
+        "parameters": [
+          {
+            "description": "Describe the situation (persons and entities). Add the variable you wish to calculate in the proper entity, with null as the value. Learn more in our official documentation: https://openfisca.org/doc/openfisca-web-api/input-output-data",
+            "in": "body",
+            "name": "Situation",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SituationInput"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "The calculation result is sent back in the response body",
+            "headers": {
+              "$ref": "#/commons/Headers"
+            },
+            "schema": {
+              "$ref": "#/definitions/SituationOutput"
+            }
+          },
+          "400": {
+            "description": "The request is invalid. Details about the error are sent back in the response body",
+            "headers": {
+              "$ref": "#/commons/Headers"
+            }
+          },
+          "404": {
+            "description": "A variable mentioned in the input situation does not exist in the loaded tax and benefit system. Details are sent back in the response body",
+            "headers": {
+              "$ref": "#/commons/Headers"
+            }
+          }
+        },
+        "summary": "Run a simulation",
+        "tags": [
+          "Calculations"
+        ]
+      }
+    },
+    "/entities": {
+      "get": {
+        "operationId": "getVariables",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "The list of the entities as well as their information is sent back in the response body",
+            "headers": {
+              "$ref": "#/commons/Headers"
+            },
+            "schema": {
+              "$ref": "#/definitions/Entities"
+            }
+          }
+        },
+        "summary": "List all available Entities",
+        "tags": [
+          "Entities"
+        ]
+      }
+    },
+    "/parameter/{parameterID}": {
+      "get": {
+        "operationId": "getParameter",
+        "parameters": [
+          {
+            "description": "ID of parameter. IDs can be obtained by enumerating the /parameters endpoint",
+            "in": "path",
+            "name": "parameterID",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested parameter's information is sent back in the response body",
+            "headers": {
+              "$ref": "#/commons/Headers"
+            },
+            "schema": {
+              "$ref": "#/definitions/Parameter"
+            }
+          },
+          "404": {
+            "description": "The requested parameter does not exist",
+            "headers": {
+              "$ref": "#/commons/Headers"
+            }
+          }
+        },
+        "summary": "Get information about a specific parameter",
+        "tags": [
+          "Parameters"
+        ]
+      }
+    },
+    "/parameters": {
+      "get": {
+        "operationId": "getParameters",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "The list of parameters is sent back in the response body",
+            "headers": {
+              "$ref": "#/commons/Headers"
+            },
+            "schema": {
+              "$ref": "#/definitions/Parameters"
+            }
+          }
+        },
+        "summary": "List all available parameters",
+        "tags": [
+          "Parameters"
+        ]
+      }
+    },
+    "/spec": {
+      "get": {
+        "operationId": "spec",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "The API documentation is sent back in the response body",
+            "headers": {
+              "$ref": "#/commons/Headers"
+            }
+          }
+        },
+        "summary": "Provide the API documentation in an OpenAPI format",
+        "tags": [
+          "Documentation"
+        ]
+      }
+    },
+    "/trace": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "operationId": "trace",
+        "parameters": [
+          {
+            "description": "Describe the situation (persons and entities). Add the variable you wish to calculate in the proper entity, with null as the value.",
+            "in": "body",
+            "name": "Situation",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SituationInput"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "The calculation details are sent back in the response body",
+            "headers": {
+              "$ref": "#/commons/Headers"
+            },
+            "schema": {
+              "$ref": "#/definitions/Trace"
+            }
+          },
+          "400": {
+            "description": "The request is invalid. Details about the error are sent back in the response body",
+            "headers": {
+              "$ref": "#/commons/Headers"
+            }
+          },
+          "404": {
+            "description": "A variable mentioned in the input situation does not exist in the loaded tax and benefit system. Details are sent back in the response body",
+            "headers": {
+              "$ref": "#/commons/Headers"
+            }
+          }
+        },
+        "summary": "Explore a simulation's steps in details.",
+        "tags": [
+          "Calculations"
+        ]
+      }
+    },
+    "/variable/{variableID}": {
+      "get": {
+        "operationId": "getVariable",
+        "parameters": [
+          {
+            "description": "ID of a variable. IDs can be obtained by enumerating the /variables endpoint.",
+            "in": "path",
+            "name": "variableID",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested variable's information is sent back in the response body",
+            "headers": {
+              "$ref": "#/commons/Headers"
+            },
+            "schema": {
+              "$ref": "#/definitions/Variable"
+            }
+          },
+          "404": {
+            "description": "The requested variable does not exist",
+            "headers": {
+              "$ref": "#/commons/Headers"
+            }
+          }
+        },
+        "summary": "Get information about a specific variable",
+        "tags": [
+          "Variables"
+        ]
+      }
+    },
+    "/variables": {
+      "get": {
+        "operationId": "getVariables",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "The list of variables is sent back in the response body",
+            "headers": {
+              "$ref": "#/commons/Headers"
+            },
+            "schema": {
+              "$ref": "#/definitions/Variables"
+            }
+          }
+        },
+        "summary": "List all available variables",
+        "tags": [
+          "Variables"
+        ]
+      }
+    }
+  },
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "tags": [
+    {
+      "description": "A parameter is a numeric property of the legislation that can evolve over time.",
+      "externalDocs": {
+        "description": "Parameters documentation",
+        "url": "https://openfisca.org/doc/parameters"
+      },
+      "name": "Parameters"
+    },
+    {
+      "description": "A variable depends on a person, or an entity (e.g. zip code, salary, income tax).",
+      "externalDocs": {
+        "description": "Variables documentation",
+        "url": "https://openfisca.org/doc/variables"
+      },
+      "name": "Variables"
+    },
+    {
+      "description": "An entity is a person of a group of individuals (such as a household).",
+      "externalDocs": {
+        "description": "Entities documentation",
+        "url": "https://openfisca.org/doc/person,_entities,_role.html"
+      },
+      "name": "Entities"
+    },
+    {
+      "name": "Calculations"
+    },
+    {
+      "name": "Documentation"
+    }
+  ]
+}

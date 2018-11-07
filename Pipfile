@@ -1,0 +1,14 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+openfisca-aotearoa = {editable = true, extras = ["test"], path = "./openfisca-aotearoa"}
+openfisca-core = {extras = ["web-api"], version = "*"}
+flask = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "2.7"
