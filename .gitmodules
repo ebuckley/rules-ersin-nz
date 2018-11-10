@@ -1,6 +1,0 @@
-[submodule "src/legislation-explorer"]
-	path = src/legislation-explorer
-	url = git@github.com:openfisca/legislation-explorer.git
-[submodule "src/openfisca-aotearoa"]
-	path = src/openfisca-aotearoa
-	url = git@github.com:ServiceInnovationLab/openfisca-aotearoa.git
