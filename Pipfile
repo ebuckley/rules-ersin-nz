@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-openfisca-aotearoa = {editable = true, extras = ["test"], path = "./openfisca-aotearoa"}
+openfisca-aotearoa = {editable = true, extras = ["test"], path = "./src/openfisca-aotearoa"}
 openfisca-core = {extras = ["web-api"], version = "*"}
 flask = "*"
 
