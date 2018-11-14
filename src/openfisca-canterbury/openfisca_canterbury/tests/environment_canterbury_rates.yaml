@@ -1,0 +1,22 @@
+- name: Environment Canterbury rates charges
+  period: 2018
+  input_variables:
+    canterbury_rates_capital_valuation: 680000
+
+  output_variables:
+    canterbury_rates_works_and_services: 239.36
+    canterbury_rates_rating_wec_class_f: 90.439995
+    canterbury_rates_general_rate: 23831.28
+    canterbury_rates_civil_defence: 975.12
+    canterbury_rates_waimak_reg_park: 575.96
+    canterbury_rates_urban_transport_chch: 17044.879
+    canterbury_rates_ashley_reg_park: 93.159996
+    canterbury_rates_wfpp_class_b: 131.24
+    canterbury_rates_air_quality: 1408.2799
+
+- name: Can calculate total Environment Canterbury charges
+  period: 2018
+  input_variables:
+    canterbury_rates_capital_valuation: 680000
+  output_variables:
+    canterbury_rates_charge: 46810

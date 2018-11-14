@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block header %}
+    <h2>Save new rule</h2>
+{% endblock %}
+{% block content %}
+    <form action="{{ url_for("rules.new_rule") }}" method="POST">
+        <fieldset>
+            <legend>Select location and rule name</legend>
+
+            <input id="form-property-location" type="hidden" name="geometry" />
+            <label for="rule_uri">Href of calculation <input type="text" name="rule_uri" placeholder="http://api.rules.ersin.nz/variable/canterbury_rates_air_quality" required></label>
+            <label>Select your property location</label>
+            <div id="mapid" class="map-container"></div>
+            <button class='form-submit' type="submit">Create new rule</button>
+        </fieldset>
+    </form>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='map_select.js') }}"></script>
+{% endblock %}

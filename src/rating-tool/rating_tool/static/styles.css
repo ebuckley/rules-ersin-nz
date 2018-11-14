@@ -1,0 +1,14 @@
+.map-container { height: 600px; }
+
+.form-submit {
+    margin-top: 20px;
+    float: right;
+}
+
+.view-map {
+    height: 240px;
+    width: 100%
+}
+thead {
+    font-weight: bold;
+}

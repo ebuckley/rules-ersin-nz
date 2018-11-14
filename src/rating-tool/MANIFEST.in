@@ -1,0 +1,4 @@
+include rating_tool/schema.sql
+graft rating_tool/static
+graft rating_tool/templates
+global-exclude *.pyc

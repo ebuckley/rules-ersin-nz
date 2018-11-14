@@ -5,8 +5,13 @@ name = "pypi"
 
 [packages]
 openfisca-aotearoa = {editable = true, extras = ["test"], path = "./src/openfisca-aotearoa"}
-openfisca-core = {extras = ["web-api"], version = "*"}
+openfisca-core = {extras = ["web"], version = "*"}
 flask = "*"
+openfisca-canterbury = {editable = true, path = "./src/openfisca-canterbury"}
+rating-tool = {editable = true, path = "./src/rating-tool"}
+records = "*"
+"psycopg2" = "*"
+requests = "*"
 
 [dev-packages]
 

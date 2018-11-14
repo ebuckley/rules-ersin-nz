@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block header %}
+    <h2>Manage geospatial rules</h2>
+{% endblock %}
+{% block content %}
+    <a href="{{ url_for("rules.new_rule") }}">Create New Rule</a>
+    <form action="{{ url_for("rules.rules_view") }}" method="GET">
+        <fieldset>
+            <legend>Find Property rules</legend>
+            <input id="form-property-location" type="hidden" name="property_location" />
+            <label>Select your property location</label>
+            <div id="mapid" class="map-container"></div>
+            <button class='form-submit' type="submit">View rates</button>
+        </fieldset>
+    </form>
+    {{ data.export("html") | safe }}
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='map_select.js') }}"></script>
+{% endblock %}
