@@ -9,4 +9,7 @@ setup(
     install_requires=[
         'flask',
     ],
+    entry_points= {
+        'console_scripts': ['rating_tool=rating_tool:main']
+    }
 )

@@ -1,5 +1,10 @@
 import os
 from flask import Flask
+import logging
+
+FORMAT = '%(asctime)-15s %(clientip)s %(user)-8s %(message)s'
+logging.basicConfig(format=FORMAT)
+logger = logging.getLogger(__name__)
 
 def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=True)
@@ -24,3 +29,7 @@ def create_app(test_config=None):
 
 
     return app
+
+
+if __name__ == '__main__':
+    main()
