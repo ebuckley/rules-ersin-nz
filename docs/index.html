@@ -10,17 +10,20 @@
 rules.ersin.nz is a knowledge base, and demo application built on the openfisca-aotearoa platform.
 </p>
 <h2>services</h2>
-<ul>
-    <li>
-        http://api.rules.ersin.nz is the openfisca-aotearoa instance that is depended on by rates/explorer.
-    </li>
-    <li>
-        http://rates.rules.ersin.nz is a simple rating simulator for the canterbury region it implements geospatial rules, and uses the rules defined in `src/openfisca-canterbury` see `src/rating-tool` for the webapp implementation.
-    </li>
-    <li>http://explorer.rules.ersin.nz is the legislation explorer project see `/src/legislation-explorer` for more detail.</li>
-</ul>
+This demo application uses a few different services to provide example implementation on top of the Open Fisca platform.
 
+<h3>Open Fisca Web Service</h3>
+<p>
+    <a href="//api.rules.ersin.nz">api.rules.ersin.nz</a> is an instance of openfisca-aotearoa, extended with the openfisca-canterbury module. It provides a the default api access using the "openfisca serve" command.
+</p>
+<h3>Rating tool</h3>
+<p>
+    <a href="http://rates.rules.ersin.nz">rates.rules.ersin.nz</a> is an example web application for showing how rules around rates calculation
+    can be implemented using Open Fisca. The demo implements geospatial filtering of what variables need to be calculated for a specific area.
+</p>
+<h3>Legislation explorer</h3>
+<a href="http://explorer.rules.ersin.nz">explorer.rules.ersin.nz</a> is the legislation explorer project see `/src/legislation-explorer`. This service provides search through what rules have been implemented. It is an index of rules that can be used with rates.rules.ersin.nz
 <h2>How it works.</h2>
-<p>This site is deployed on a single VPS of the smallest possible size. We use openfisca-aotearoa, python, flask, nodejs, express and plane old html to run the site.</p>
-<p> Read the source code on <a href="https://github.com/ebuckley/rules-ersin-nz"></a>github</p>
+<p>This site is deployed on a single VPS of the smallest possible size. We use openfisca-aotearoa, python, flask, nodejs, express and plain old html to run the site.</p>
+<p>This knowledge base is developed as an open source project, and you can read the code on <a href="https://github.com/ebuckley/rules-ersin-nz">github</a>. Issues, Pull Requests and contributions are welcome.</p>
 </html>
